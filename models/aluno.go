@@ -1,12 +1,12 @@
 package models
 
-import "gorm.io/gorm"
+import (
+	"gorm.io/gorm"
+)
 
 type Aluno struct {
 	gorm.Model
-	Nome string `json:"nome"`
-	CPF  string `json:"cpf"`
-	RG   string `json:"rg"`
+	Nome string `gorm:"size:255; not null;" json:"nome"`
+	CPF  string `gorm:"size:11; not null;" json:"cpf"`
+	RG   string `gorm:"size:9; not null;" json:"rg"`
 }
-
-var Alunos []Aluno

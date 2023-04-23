@@ -1,0 +1,42 @@
+{{define "cadastra_aluno.html"}}
+
+{{template "_head"}}
+
+<section class="container mt-2 col-8">
+    {{template "_menu"}}
+    <div class="contact-area section-padding-0-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h2>Criar novo aluno</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="contact-form-area">
+                        <form action="cadastrar_aluno" method="post">
+                            <div class="form-group">
+                                <label for="nome">Nome:</label>
+                                <input type="text" name="nome" class="form-control">
+
+                                <label for="cpf">CPF:</label>
+                                <input type="number" name="cpf" class="form-control" minlength="11" maxlength="11">
+
+                                <label for="rg">RG:</label>
+                                <input type="number" name="rg" class="form-control" minlength="9" maxlength="9">
+                            </div>
+
+                            <div class="mt-2 col-12 text-center">
+                                <button class="btn btn-outline-primary" type="submit">Criar sua conta</button>
+                                <a class="btn btn-info" href="/">Voltar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{end}}
